@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCS-2</title>
+    <style>
+       .container
+       {
+         border: 2px dashed rgb(205, 5, 5);
+         display: flex;
+         height:30vh;
+         /*container properties*/
+         justify-content:center;/*Horizontally*/
+         align-items:center;/* Vertically,single line*/
+         flex-direction: column;/*arrange in column*/
+          flex-wrap: wrap;
+          align-content: flex-start;/*more than one line*/
+           /*there is no justify-items in flexbox*/
+           flex-flow:row wrap;/*flex-direction || flex-wrap*/
+           row-gap: 40px;
+           column-gap: 10px;
+           gap: 40px 10px ;/*row-gap column-gap*/
+       }
+       .containergrid
+       {
+        border: 2px solid black;
+        display: grid;
+       /* grid-template-columns: 120px 100px;
+        grid-template-rows: 100px 100px 100px ;*/
+        grid-template-areas: "nav nav nav"
+                             "side article article"
+                             "footer footer footer";
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+       }
+       .secitem
+       {
+        border: 2px solid yellow;
+        height: 55px;
+       }
+      
+       .item{
+        
+        height: 32px;
+        width: 32px;
+        border: 2px solid black;
+        margin: 5px;
+        background-color: aquamarine;
+       }
+     .item1
+       {
+        /*grid-row:1/2; or*/
+       /* grid-row-start: 1; 
+        grid-row-end: 2;
+        grid-column: 1/2;*/
+        grid-area: nav;
+        background-color: blue;
+       }
+       .item2{
+          grid-area: side;
+          background-color:brown;
+       }
+       .item3{
+          grid-area: article;
+          background-color: chartreuse;
+        }
+        .item4{
+          grid-area: footer ;
+          background-color:blueviolet;
+       }
+       
+       .item12{
+           flex-shrink: 2;
+           align-self: flex-end;/*need to remove align-center apply this &&
+            this is applied to selected item only*/
+       }       
+       .order-1
+       {
+        order: 1;
+       }
+       .order-2
+       {
+        order: 2;
+       }
+       .order-3
+       {
+        order: 3;
+       }
+       .bx
+       {
+          
+         height: 80px;
+         width:80px;
+         background-color: aqua;
+         border:2px solid black;
+         transform:rotate(30deg);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+       .trans
+       {
+         margin-top: 20px;
+         width: 1000vw;
+         height: 15vh;
+         border: 2px solid black;
+       }
+       .transi
+       {
+         margin: 20px;
+         padding: 10px;
+         height: 40vh;
+         width: 50vw;
+         border: 2px solid black;
+       }
+       .tbox
+       {
+           height: 4vh;
+           width: 5vw;
+           border: 2px solid red;
+           transition-property:transform;
+           transition-duration: 3s;
+           transition-timing-function: ease-in-out;
+           transition-delay: 1s;
+       }
+       .translate
+       {
+           transform: translateX(10vh) translateY(10vh) scale(2);
+           background-color: aqua;
+       }
+       .anicontainer
+       {
+         height: 40vh;
+         width: 100vw;
+         border: 2px solid black;         
+       }
+       .anibox
+       {
+         height:4vh;
+         width:7vw;
+         border: 2px solid black;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: red;
+         background-color: aliceblue;
+         /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+         animation: sanimation ;/*name of the animation variable*/
+         animation-duration: 3s;/*duration taken for the animation */
+         animation-iteration-count: 2;/*nnumber of times execution of the animation*/
+         animation-timing-function: ease-in-out;/*type of motion */
+         animation-delay: 2s;/*time to start the animation after delay*/
+         animation-direction: alternate-reverse;/*direction of motion*/
+         /*animation-play-state:paused;-use to the animation when required*/
+         animation-fill-mode: forwards;
+         
+}
+       @keyframes sanimation
+       {
+         form{
+            background-color: red;
+         }
+         to
+         {
+                transform: translateX(500px) translateY(200px);
+                background-color: blue;
+         }
+         
+        
+       }
+       .pic
+       {
+        margin: 20px;
+        width:50vw;
+        height: 30vh;
+        border: 2px solid black;
+       }
+       .img
+       {
+      
+        width: 50vw;
+        height: 50vh;
+        object-fit: cover;
+       }
+    </style>
+</head>
+<body>
+    <!--Flex box-->
+    <div class="container">
+        <div class="item item12">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item order-1">4</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item order-1">69</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+         <div class="item"></div>
+     </div>
+     <br><br><br><br><br>
+     <div class="containergrid">
+        <div class="secitem item1">1</div>
+        <div class="secitem item2">2</div>
+        <div class="secitem item3">3</div>
+        <div class="secitem item4">4</div>
+        <div class="secitem item5">5</div>
+     </div>
+
+     <div class="trans">
+          <div class="bx">BOX</div>
+     </div>
+
+     <div class="transi ">
+        <div class="tbox translate"></div>
+     </div>
+
+     <div class="anicontainer">
+      <div class="anibox">
+         BOX
+      </div>
+     </div>
+
+     <div class="pic">
+          <img src="mountain.png" width="250vw" height="200px">
+     </div>
+</body>
+</html>

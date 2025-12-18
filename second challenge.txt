@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAYOUT</title>
+   <style>
+    body{
+      background-color: cornsilk;
+    }
+    .box{
+      border: 2px solid black;
+      height:500px;
+      width: 600px;
+      margin: 100px;
+      margin-left: 450px;
+
+    }
+    .container{
+      border: 2px ;
+      height: 240px;
+      background-color: greenyellow;
+    } 
+    .box1{
+      border: 2px solid whitesmoke;
+      height:50px;
+      width: 600px;
+      background-color: aqua;
+      text-align: center;
+      letter-spacing:2px;
+      word-spacing:20px ;
+
+    }
+    .box2{
+     border: 2px solid black;
+      height:180px;
+      width: 180px ;
+      margin: 30px;
+      margin-left: 50px;
+      background-color: red;
+      display: inline-block;
+      }
+
+      .box3{
+     border: 2px solid black;
+      height:180px;
+      width: 180px ;
+      margin: 30px;
+      margin-left: 80px;
+      display: inline-block;
+      background-color: blue;
+      }
+      .box4{
+        border: 2px solid whitesmoke;
+        height:100px;
+      width: 400px ;
+      margin-left: 90px;
+      margin-top: 10px;
+      border-radius: 15px;
+      color: azure;
+      text-align: center;
+      }
+      .container2  {
+      border: 2px solid black;
+      height:205px;
+      background-color: black;
+      }
+      .box5{
+      border: 2px solid white ;
+      width: 50px;
+      height:50px;
+      margin-left: 525px;
+      margin-top: 20px;
+      border-radius: 60px;
+      background-color: orange;
+      position: sticky;
+      }
+   </style>
+</head>
+<body>
+  <div class="box">
+    <nav class="box1"> SIGMA   WEB   DEVELOPMENT  COURSE</nav>
+     
+    <div class="container">
+      <div class="box2"></div>
+      <div class ="box3"></div>
+    </div>
+   <div class="container2">
+    <div class="box4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor corrupti, ratione excepturi praesentium ipsa voluptas aspernatur? Fugit, assumenda quos aut corrupti odio debitis!</div>
+    <div class="box5"></div>
+    </div> 
+
+  </div>
+</body>
+</html>

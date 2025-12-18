@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge CARD</title>
+  <style>
+  body {
+      background-color: grey;
+    }
+    *{
+      margin: 8px;
+      border-radius: 8px;
+    }
+    .box{
+        background-color:white;
+        border: 2px solid gainsboro;
+        width: 190px;
+        height: 48vh;
+        border-radius: 10px;
+    }
+    div h2{
+     background-color: white;
+
+    }
+    .name{
+      border:2px solid gainsboro;
+      border-radius: 10px ;
+      
+      height: 2vh;
+      display: inline-block;
+      
+    } 
+    div p{
+      text-align:left;
+      color: rgb(147, 146, 146);
+    } 
+    div h6{
+      padding-top: 2px;
+      margin: 50px;
+      text-align:inherit;
+      margin-top: 2px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: lightblue;
+      color: blue;
+      border: 2px solid gainsboro;
+      width: 80px ;
+      height: 3vh;
+    } 
+  </style>
+</head>
+<body>
+  <div class="box">
+      <img src="train.png" width="175" height="175"  >
+  
+       <nav class="name">
+          Train  
+       </nav>
+       <nav class="name" >
+        Transport
+       </nav>
+      <h2>vande bharat</h2>
+
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis necessitatibus laborum .
+     <p>
+     <h6>
+      <a href="https://www.google.com." >Read More</a>
+     </h6>
+  </div>
+</body>
+</html>
